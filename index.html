@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Valentin Nap</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffccd5; /* ha a kép nem töltene be */
+        position: relative;
+    }
+
+    /* Kép konténer */
+    .image-container {
+        position: relative;
+        z-index: 0;
+    }
+
+    #bg-img {
+        max-width: 80vw;
+        max-height: 70vh;
+        border-radius: 15px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    /* Szöveg és gombok konténer */
+    .overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1;
+    }
+
+    h1 {
+        color: white;
+        font-size: 2em;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        margin-bottom: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    button {
+        padding: 12px 30px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    }
+
+    #noBtn { background-color: #ff6b81; color: white; }
+    #yesBtn { background-color: #ffdee9; color: #ff1a75; }
+
+    #message {
+        color: white;
+        font-size: 2em;
+        text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        z-index: 2;
+    }
+
+    /* Szívecske eső stílus */
+    .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        clip-path: polygon(
+            50% 0%, 61% 15%, 75% 15%, 84% 27%, 84% 42%, 
+            75% 56%, 50% 80%, 25% 56%, 16% 42%, 16% 27%, 
+            25% 15%, 39% 1
